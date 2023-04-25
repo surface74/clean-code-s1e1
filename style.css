@@ -32,24 +32,24 @@
   margin: 0 auto;
 }
 
-.task {
+.task_content {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
   outline: none;
 }
 
-.incomplete-tasks,
-.completed-tasks {
+.current-task__list,
+.completed-task__list {
   margin: 0;
   padding: 0;
 }
 
-.task-wrapper {
+.task {
   list-style: none;
 }
 
-.button {
+.task__button {
   outline: none;
   background: none;
   border: 0;
@@ -60,7 +60,7 @@
   cursor: pointer;
 }
 
-.button:hover {
+.task__button:hover {
   color: #3a3a3a;
 }
 
@@ -75,7 +75,7 @@
   text-transform: uppercase;
 }
 
-.input.task {
+.task__input.task_content {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -88,7 +88,7 @@
   color: #888888;
 }
 
-.input.task:focus {
+.task__input.task_content:focus {
   color: #333333;
 }
 
@@ -103,7 +103,7 @@
 }
 
 /* Task list */
-.task-wrapper {
+.task {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eeeeee;
@@ -112,50 +112,50 @@
   align-items: center;
 }
 
-.checkbox {
+.task__completed {
   margin: 0 10px;
 }
 
-.task-wrapper > .label {
+.task > .task__label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-.task-wrapper > .input.task {
+.task > .task__input.task_content {
   width: 226px;
 }
 
-.button-delete-img {
+.delete-img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-.button-delete-img:hover {
+.delete-img:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-.completed-tasks .label.task {
+.completed-task__list .task__label.task_content {
   text-decoration: line-through;
   color: #888888;
 }
 
 /* Edit Task */
-.incomplete-tasks .input.task,
-.completed-tasks .input.task {
+.current-task__list .task__input.task_content,
+.completed-task__list .task__input.task_content {
   display: none;
 }
 
-.task-wrapper_edit .input.task,
-.task-wrapper_edit .input.task {
+.task_edit .task__input.task_content,
+.task_edit .task__input.task_content {
   display: inline-block;
   width: 224px;
 }
 
-.task-wrapper_edit .label.task,
-.task-wrapper_edit .label.task {
+.task_edit .task__label.task_content,
+.task_edit .task__label.task_content {
   display: none;
 }
